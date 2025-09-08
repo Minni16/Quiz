@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minni Quiz</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Quiz Game</h1>
+    </header>
+
+    <section id="screen-start" class="screen">
+      <h2>Choose Difficulty</h2>
+      <form id="difficulty-form" class="difficulty">
+
+        <label class="chip">
+          <input type="radio" name="difficulty" value="easy" checked />
+          <span>Easy</span>
+        </label>
+        <label class="chip">
+          <input type="radio" name="difficulty" value="medium" />
+          <span>Medium</span>
+        </label>
+        <label class="chip">
+          <input type="radio" name="difficulty" value="hard" />
+          <span>Hard</span>
+        </label>
+      </form>
+      <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+    </section>
+
+    <section id="screen-quiz" class="screen hidden">
+      <div class="quiz__bar">
+        <div id="progress" class="progress">Question 1 of 5</div>
+        <div id="score" class="score">Score: 0</div>
+      </div>
+
+      <article class="card">
+        <h2 id="question-text" class="question">Question text</h2>
+        <form id="options" class="options" role="radiogroup" aria-label="Answer options"></form>
+        <div class="actions">
+          <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="screen-results" class="screen hidden">
+      <h2>Results</h2>
+      <p id="final-score" class="final-score"></p>
+      <div id="summary" class="summary"></div>
+      <div class="actions">
+        <button id="restart-btn" class="btn btn-primary">Restart Quiz</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
